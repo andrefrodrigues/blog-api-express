@@ -1,6 +1,15 @@
 version: '3.9'
 
 services:
+  api:
+    image: blog-api
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 4000:4000
+    volumes:
+      - ./:/usr/src/app
   mongodb:
     image: mongo:6.0
     ports:

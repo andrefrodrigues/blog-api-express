@@ -39,7 +39,7 @@ async function listen(port: number) {
 
 async function main() {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/blog')
+    await mongoose.connect('mongodb://mongodb:27017/blog')
     mongoose.set('strictQuery', false)
     await listen(4000)
     console.log('🚀 Server is ready at http://localhost:4000/graphql')
